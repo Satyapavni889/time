@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><div class="main" style="display: flex;height: 70px;column-gap: 10px;">
+    <div class="hours" style="width: 100px;background-color: rgb(83, 82, 82);display: flex;justify-content: center;padding-top: 10px;font-size: 40px;border-radius: 40%;">00</div><span class="col1" style="margin-top: 10px;">:</span>
+    <div class="mins"style="width: 100px;background-color: rgb(83, 82, 82);display: flex;justify-content: center;padding-top: 10px;font-size: 40px;border-radius: 40%">00</div>
+    <div class="sec"style="width: 100px;background-color: rgb(83, 82, 82);display: flex;justify-content: center;padding-top: 10px;font-size: 40px;border-radius: 40%" >00</div></div>
+    <script>
+        let col1=document.querySelector(".col1")
+
+        let hours=document.querySelector(".hours")
+        
+        let mins=document.querySelector(".mins")
+
+        let sec=document.querySelector(".sec")
+
+        setInterval(()=>{
+            let present=new Date()
+            hours.innerHTML=(present.getHours()<10?"0":" ")+present.getHours()
+            mins.innerHTML=(present.getMinutes()<10?"0":" ")+present.getMinutes()
+            sec.innerHTML=(present.getSeconds()<10?"0":" ")+present.getSeconds()
+        },1000)
+        
+    </script>
+</body>
+</html>
